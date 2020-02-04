@@ -7,3 +7,48 @@ const one = document.querySelector('.one');
 const two = document.querySelector('.two');
 let fahrenheit;
 let celsius;
+
+const change = () => {
+  if(one.innerText === '°C'){
+    one.innerText = '°F';
+    two.innerText = '°C';
+    result.innerText = '';
+  } else {
+    one.innerText = '°C';
+    two.innerText = '°F';
+    result.innerText = '';
+  }
+};
+
+const celToFahr = () => {
+  fahrenheit = converter.value * 1.8 + 32;
+  result.innerText = `${converter.value} °C to ${fahrenheit.toFixed(1)}°F`;
+  converter.value = '';
+};
+
+const fahrToCel = () => {
+  celsius = (converter.value - 32) / 1.8;
+  result.innerText = `${converter.value} °F to ${celsius.toFixed(1)}°C`;
+  converter.value = '';
+};
+
+const convert = () => {
+  if(converter.value !== ''){
+    if(one.innerText === '°C'){
+      celToFahr();
+    } else {
+      fahrToCel();
+    }
+  } else {
+    result.innerText = 'Podaj liczbę';
+  }
+};
+
+const reset = () => {
+  result.innerText = '';
+  converter.value = '';
+};
+
+convBtn.addEventListener('click', convert);
+changeBtn.addEventListener('click', change);
+resetBtn.addEventListener('click', reset);

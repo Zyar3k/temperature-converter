@@ -19,6 +19,10 @@ body {
 
 label {
   font-size: 36px;
+  padding: 10px 30px;
+  border: 2px solid var(--color);
+  border-radius: 10px;
+  color: black;
 }
 
 input {
@@ -26,6 +30,7 @@ input {
   margin-bottom: 10px;
   padding: 5px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .passinfo {
@@ -36,10 +41,10 @@ input {
 button {
   margin: 0 30px;
   padding: 10px 30px;
-  background: rgb(236, 136, 136);
+  background: none;
   border: 2px solid var(--color);
-  border-radius: 5px;
-  color: var(--color);
+  border-radius: 10px;
+  color: black;
   font-size: 28px;
   text-transform: uppercase;
   cursor: pointer;
